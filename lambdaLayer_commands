@@ -1,0 +1,11 @@
+
+##commands to create zip for lambda layer
+
+mkdir lambda 
+cd lambda
+mkdir python
+cd python
+pip3 install -t . pandas
+pip3 install -t . cryptography
+rm -r *dist-info __pycache__ # remove unused files
+zip -r layer.zip python
